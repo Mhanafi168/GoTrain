@@ -1,2 +1,0 @@
-# GoTrain
-SE project
