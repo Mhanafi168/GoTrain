@@ -34,7 +34,7 @@ $db->closeConnection();
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">TrainEase</a>
+            <a class="navbar-brand" href="#">GoTrain</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,63 +66,6 @@ $db->closeConnection();
         <a href="#features" class="scroll-down" id="scrollDown">
             <i class="fas fa-chevron-down"></i>
         </a>
-    </section>
-
-    <section id="features" class="features">
-        <div class="container">
-            <div class="row text-center">
-                <?php if (!empty($result)): ?>
-                    <div class="col-md-4 mb-4">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fa-solid fa-train"></i>
-                            </div>
-                            <h3 class="feature-title">
-                                <?php echo 'Available ' . htmlspecialchars($result[7]['destination_station']) . ' Trip' ?>
-                            </h3>
-                            <p>
-                                <?php echo 'Journey date: ' . htmlspecialchars($result[7]['journey_date']) ?><br>
-                                <?php echo 'Departure: ' . htmlspecialchars($result[7]['departure_time']) ?>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fa-solid fa-train"></i>
-                            </div>
-                            <h3 class="feature-title">
-                                <?php echo 'Available ' . htmlspecialchars($result[1]['destination_station']) . ' Trip' ?>
-                            </h3>
-                            <p>
-                                <?php echo 'Journey date: ' . htmlspecialchars($result[1]['journey_date']) ?><br>
-                                <?php echo 'Departure: ' . htmlspecialchars($result[1]['departure_time']) ?>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 mb-4">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fa-solid fa-train"></i>
-                            </div>
-                            <h3 class="feature-title">
-                                <?php echo 'Available ' . htmlspecialchars($result[13]['destination_station']) . ' Trip' ?>
-                            </h3>
-                            <p>
-                                <?php echo 'Journey date: ' . htmlspecialchars($result[13]['journey_date']) ?><br>
-                                <?php echo 'Departure: ' . htmlspecialchars($result[13]['departure_time']) ?>
-                            </p>
-                        </div>
-                    </div>
-                <?php else: ?>
-                    <div class="col-12">
-                        <div class="alert alert-info">No upcoming trips available at the moment.</div>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
     </section>
 
     <script src="./views/public/assets/js/popper.min.js"></script>
